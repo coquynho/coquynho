@@ -1,0 +1,6 @@
+172.30.0.1 - - [27/Mar/2020:09:09:07 +0000] "GET / HTTP/1.1" 404 8248 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"
+172.30.0.1 - - [27/Mar/2020:09:09:08 +0000] "GET /favicon.ico HTTP/1.1" 404 22495 "http://127.0.0.1:8888/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"
+172.30.0.1 - - [27/Mar/2020:09:11:54 +0000] "GET / HTTP/1.1" 404 8248 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"
+172.30.0.1 - - [27/Mar/2020:09:11:54 +0000] "GET /favicon.ico HTTP/1.1" 404 22503 "http://thuyblog.test:8888/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"
+172.30.0.1 - - [28/Mar/2020:01:03:51 +0000] "GET / HTTP/1.1" 200 5263 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"
+172.30.0.1 - - [28/Mar/2020:01:09:03 +0000] "GET / HTTP/1.1" 200 5264 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"
