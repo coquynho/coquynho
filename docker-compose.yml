@@ -1,7 +1,7 @@
 version: '3'
 
 networks:
-  thuy-blog:
+  girls-blog:
     driver: ${NETWORKS_DRIVER}
 
 volumes:
@@ -20,12 +20,12 @@ services:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
         - ./php-worker/supervisord.d:/etc/supervisord.d
       ports:
-        - "22:22"
+        - "2222:22"
       tty: true
       environment:
         - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
       networks:
-        - thuy-blog
+        - girls-blog
 
 ### PHP-FPM ##############################################
     php-fpm:
@@ -36,13 +36,12 @@ services:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
       expose:
         - "9000"
-      
       environment:
         - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
       depends_on:
         - workspace
       networks:
-        - thuy-blog
+        - girls-blog
 
 
 ### NGINX Server #########################################
@@ -58,7 +57,7 @@ services:
       depends_on:
         - php-fpm
       networks:
-        - thuy-blog
+        - girls-blog
 
 
 ### MySQL ################################################
@@ -74,17 +73,6 @@ services:
         - ./data/mysql:/var/lib/mysql
         - ./mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
       ports:
-        - "3306:3306"
+        - "3066:3306"
       networks:
-        - thuy-blog
-
-### Redis ################################################
-    redis:
-      build: ./redis
-      volumes:
-        -  ./data/redis:/data
-      ports:
-        - "6379:6379"
-      networks:
-        - thuy-blog
-
+        - girls-blog

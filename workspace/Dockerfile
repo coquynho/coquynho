@@ -37,22 +37,22 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y --allow-downgrades --allow-remove-essential \
         --allow-change-held-packages \
-        php7.3-cli \
-        php7.3-common \
-        php7.3-curl \
-        php7.3-intl \
-        php7.3-json \
-        php7.3-xml \
-        php7.3-mbstring \
-        php7.3-mysql \
-        php7.3-pgsql \
-        php7.3-sqlite \
-        php7.3-sqlite3 \
-        php7.3-zip \
-        php7.3-bcmath \
-        php7.3-memcached \
-        php7.3-gd \
-        php7.3-dev \
+        php7.4-cli \
+        php7.4-common \
+        php7.4-curl \
+        php7.4-intl \
+        php7.4-json \
+        php7.4-xml \
+        php7.4-mbstring \
+        php7.4-mysql \
+        php7.4-pgsql \
+        php7.4-sqlite \
+        php7.4-sqlite3 \
+        php7.4-zip \
+        php7.4-bcmath \
+        php7.4-memcached \
+        php7.4-gd \
+        php7.4-dev \
         pkg-config \
         libcurl4-openssl-dev \
         libedit-dev \
@@ -96,9 +96,9 @@ ENV PGID ${PGID}
 RUN set -xe; \
     apt-get update -yqq && \
     pecl channel-update pecl.php.net && \
-    groupadd -g ${PGID} thuyBlog && \
-    useradd -u ${PUID} -g thuyBlog -m thuyBlog -G docker_env && \
-    usermod -p "*" thuyBlog -s /bin/bash && \
+    groupadd -g ${PGID} girlsBlog && \
+    useradd -u ${PUID} -g girlsBlog -m girlsBlog -G docker_env && \
+    usermod -p "*" girlsBlog -s /bin/bash && \
     apt-get install -yqq \
     apt-utils \
       #
@@ -145,7 +145,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ###########################################################################
 
 # add ./vendor/bin to non-root user's bashrc (needed for phpunit)
-USER thuyBlog
+USER girlsBlog
 
 RUN echo "" >> ~/.bashrc && \
     echo 'export PATH="/var/www/vendor/bin:$PATH"' >> ~/.bashrc

@@ -14,7 +14,7 @@ APP_CODE_PATH_CONTAINER=/var/www
 APP_CODE_CONTAINER_FLAG=:cached
 
 # Choose storage path on your machine. For all storage systems
-DATA_PATH_HOST=~/.laradock/data
+DATA_PATH_HOST=./data
 
 ### Drivers ################################################
 
@@ -33,13 +33,13 @@ COMPOSE_FILE=docker-compose.yml
 COMPOSE_PATH_SEPARATOR=:
 
 # Define the prefix of container names. This is useful if you have multiple projects that use laradock to have seperate containers per project.
-COMPOSE_PROJECT_NAME=laradock
+COMPOSE_PROJECT_NAME=girlsblog
 
 ### PHP Version ###########################################
 
 # Select a PHP version of the Workspace and PHP-FPM containers (Does not apply to HHVM).
 # Accepted values: 7.4 - 7.3 - 7.2 - 7.1 - 7.0 - 5.6
-PHP_VERSION=7.3
+PHP_VERSION=7.4
 
 ### Phalcon Version ###########################################
 
@@ -54,12 +54,12 @@ PHP_INTERPRETER=php-fpm
 ### Docker Host IP ########################################
 
 # Enter your Docker Host IP (will be appended to /etc/hosts). Default is `10.0.75.1`
-DOCKER_HOST_IP=10.0.75.1
+DOCKER_HOST_IP=192.168.33.14
 
 ### Remote Interpreter ####################################
 
 # Choose a Remote Interpreter entry matching name. Default is `laradock`
-PHP_IDE_CONFIG=serverName=laradock
+PHP_IDE_CONFIG=serverName=girlsblog
 
 ### Windows Path ##########################################
 

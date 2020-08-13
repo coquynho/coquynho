@@ -120,8 +120,8 @@ RUN set -xe; php -v | head -n 1 | grep -q "PHP 7.3."
 #--------------------------------------------------------------------------
 #
 
-COPY ./thuyBlog.ini /usr/local/etc/php/conf.d
-COPY ./thuyBlog.pool.conf /usr/local/etc/php-fpm.d/
+COPY ./girlsBlog.ini /usr/local/etc/php/conf.d
+COPY ./girlsBlog.pool.conf /usr/local/etc/php-fpm.d/
 
 USER root
 
